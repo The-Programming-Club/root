@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>How to use Git</h2>
+<h3>What is Git?</h3>
+<p>Git is a version control system. </p>
+<h3>What is a version control system?</h3>
+<p> A version control system is a system that records changes to a file or set of files. <br> <br>
+	This allows you to roll back to specific versions of those files later, not just the most recent versions. </p>
+<h3>How to set up Git?</h3>
+<h4>Windows</h4>
+<p>Firstly, I don't personally recommend you use Windows for programming. If you do use it though, this is how to set up Git. </p>
+<ol>
+	<li>Download <a href="http://git-scm.com/download/win">Git for Windows</a> </li>
+	<li>Install the file.</li>
+	<li>Search for Git in your Programs. You will see both Git GUI and Git Bash. We will focus on using Git Bash, since the GUI is pretty straightforward.</li>
+	<li>You are done installing Git on Windows!</li>
+</ol>
+<h4>Linux</h4>
+<ol>
+	<li>Open Terminal (Keyboard shortcut is Ctrl+Alt+T on Ubuntu)</li>
+	<li>Type the following code: (and enter your password when prompted) <br><code>sudo apt-get update <br>sudo apt-get install git</code> </li>
+	<li>Done!</li>
+</ol>
+<h4>Mac OS X</h4>
+<ol>
+	<li>Download <a href="http://git-scm.com/download/mac"z>Git for Mac</a></li>
+	<li>Install the file.</li>
+	<li>Finished</li>
+</ol>
+<p> There are a number of important commands for Git. You enter them by typing them into the bash console, or the terminal. This tutorial will walk you through cloning a repository, adding a new file, committing the new file, then pushing your changes to the repository. <br> <a href="https://github.com/TheProgrammingClub/SampleRepository">This is the repository we will be using.</a></p>
+<h4>Cloning a repository: git clone</h4>
+<p>git clone is the first thing you do when joining a new repository for this tutorial.</p>
+<ol>
+	<li>In your terminal, make a directory where you want to put your project. <br> <code>mkdir theprogrammingclub</code> </li>
+	<li>Navigate to that directory.<br> <code>cd theprogrammingclub</code> </li>
+	<li>Now, click on <a href="https://github.com/TheProgrammingClub/SampleRepository">this link</a> to go to the site on github.com, you may need to sign in or create an account if you haven't.</li>
+	<li>On the right side of the screen there is a box that says HTTPS clone URL, as seen below. </li>
+	<img src="GitClone.jpg" alt="Git Clone Box" style="width:225px;height:180px">
+	<li>Copy the link to your clipboard.</li>
+	<li>In your terminal screen, type <code>git clone</code></li>
+	<li>Now right click the terminal screen, and press paste.</li>
+	<li>Press enter.</li>
+	<li>If all went according to plan, (you may need to put in your Github info) you should now have the repository in your 'theprogrammingclub' folder! </li>
+</ol>
+<h4>Adding a new file: git add</h4>
+<p>After having made a new file, we will then want to add that file to our git index. It is very straightforward to do so.</p>
+<ol>
+	<li>Make a text file, call it yourname.txt. In my case, it would be joshbaker.txt</li>
+	<li>Open it and write "yourname is doing the git tutorial!"</li>
+	<li>Save the file to theprogrammingclub directory, in the repository you just cloned, then close the file</li>
+	<li>In your terminal, navigate to the repository. <br> <code>cd</code> <br> <code>cd theprogrammingclub</code> <br> <code>cd SampleRepository</code> </li>
+	<li>We want to add the file to our git index. To do so, type: <br> <code>git add yourname.txt</code> </li>
+	<li> We have now added the file, and should commit it to the local repository.
+
+</ol>
+
+<h4>Committing a new file: git commit</h4>
+<p>After having made a new file, we will then want to commit that file to our local repository.</p>
+<ol>
+	<li>First we want to make sure there have been no changes to the repository since we last cloned. To do so, type: <br> <code>git pull</code></li>
+	<li>Now, type <br> <code> git commit </code> </li>
+	<li>Type the message you want to be with your commit. This will be information about what you have done.</li>
+	<li>Press enter</li>
+	<li>Your commit should have succeeded!</li>
+	<li>(if you don't want to go through the effort of adding then committing, simply typing git commit -a should add then commit all files)</li>
+</ol>
+<h4>Pushing a new file: git push</h4>
+<p>The final step to adding a file to a repository. This brings all of our changes from the local repository to the remote repository </p>
+<ol>
+	<li>While still in the same directory, now type: <br> <code>git push</code></li>
+	<li>Your code should now be pushed! Go to github.com to see if your code is there.</li>
+</ol>
+
+<h3>A good flowchart of what the different commands do:</h3>
+<img src="gitflowchart.jpg" alt="Git Flow Chart" style="width:481px;height:455px">
+</body>
+</html>
